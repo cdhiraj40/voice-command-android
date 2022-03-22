@@ -11,7 +11,7 @@ The application uses mainly Aimybox Android SDK to create a voice assistant. The
 Core Android SDK provides the main Aimybox service that manages all nested processes of every voice assistant application.
 
 2. [Google platform speechkit](https://github.com/just-ai/aimybox-android-sdk/tree/master/google-platform-speechkit)
-Another module that is provided by <b>AimyBoxSpeech</b> Google platform speechkit. It is the same good old android's recognition and synthesis by Google Services. The reason to use this is pretty straight-forward that is to not write alot of implementations. It
+Another module that is provided by <b>AimyBoxSpeech</b> Google platform speechkit. It is the same good old android's recognition and synthesis by Google Services. The reason to use this is pretty straight-forward that is to not write alot of implementations. It gives us direct functions that makes the whole process really easier.
 
 ## 2. [Vosk-Android](https://github.com/alphacep/vosk)
 Vosk is a speech recognition toolkit. It gives an offline support to around 20+ languages. It is pretty lightweight and gives portable per-language models of around 50Mb each that can be easily integrated with your application, but because of small size it does come with a drawback i.e. less accurate. If you are not worried about an offline integration then it does provide bigger server models too that are more accurate. one can read more about vosk from [here](https://alphacephei.com/vosk/).
