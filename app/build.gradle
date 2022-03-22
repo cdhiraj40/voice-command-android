@@ -46,17 +46,32 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
 
-    implementation("com.github.bumptech.glide:glide:4.13.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
+    implementation("com.github.bumptech.glide:glide:4.13.0") {
+        because "Used by the aimybox library"
+    }
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0") {
+        because "Used by the aimybox library"
+    }
 
 
     def aimyboxVersion = "0.16.9"
 
-    implementation("com.just-ai.aimybox:core:$aimyboxVersion")
-    implementation("com.just-ai.aimybox:google-platform-speechkit:$aimyboxVersion")
-    implementation("com.just-ai.aimybox:rasa-api:$aimyboxVersion")
-    implementation("com.just-ai.aimybox:components:$aimyboxVersion")
-    implementation("com.just-ai.aimybox:dummy-api:$aimyboxVersion")
-    implementation("com.alphacephei:vosk-android:0.3.32")
-    implementation ("net.java.dev.jna:jna:5.10.0@aar")
+    implementation("com.just-ai.aimybox:core:$aimyboxVersion") {
+        because "aimybox core library"
+    }
+    implementation("com.just-ai.aimybox:google-platform-speechkit:$aimyboxVersion") {
+        because "Speech and synthesis by Google Services."
+        because "Currently used for speech to text and vice versa"
+    }
+
+    implementation("com.just-ai.aimybox:components:$aimyboxVersion") {
+        because "library for Aimybox components"
+    }
+
+    implementation("com.alphacephei:vosk-android:0.3.32") {
+        because "kaldi speechkit uses vosk speech recognition toolkit/library"
+    }
+    implementation("net.java.dev.jna:jna:5.10.0@aar") {
+        because "used by vosk library for model path"
+    }
 }
