@@ -1,6 +1,10 @@
 # voice-command-android
 A simple voice command bot with voice triggers made using aimybox, kaldi speechkit and vosk
 
+# Result
+
+https://user-images.githubusercontent.com/75211982/163027920-8ae70a2a-bc8b-47ec-939e-063422262be1.mp4
+
 # Libraries used
 The bot uses following open-source libraries: 
 ## 1. [Aimybox SDK](https://github.com/just-ai/aimybox-android-sdk/)
